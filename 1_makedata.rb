@@ -5,11 +5,7 @@ require 'debugger'
 ### start method definitions
 
 def question_header?(row)
-  if row[0].to_s[0..6].match(/\d{1,2}\.\s.+/) != nil
-    true
-  else
-    false
-  end
+  row[0].to_s[0..6].match(/\d{1,2}\.\s.+/) != nil
 end
 
 def find_questions(rows)
