@@ -1,24 +1,25 @@
 class Question
-  TYPES = [
-    :top_two,
-    :single,
-    :table,
-    :rank
-  ]
+  attr_reader :sample_size
   
-  def initialize(name, number, start_row, end_row)
-    @name, @number, @start_row, @end_row = name, number, start_row, end_row
-    @values = []
+  def initialize(name, number, rows)
+    @name, @number, @rows = name, number, rows
+    @sample_size = 0
+    @values = get_values
+  end
+  
+  def add_value(name, count)
+    val = Value.new(name, count)
+    val.question = self
+    val
   end
   
   # write factory methods here
   
   def self.parse_row_data(rows)
-    debugger
     number = rows[0][0].match(/\d/)[0]
     name = rows[0][0]
     type = Question.parse_type(rows)
-    
+    type.new(name, number, rows)
   end
   
   def self.parse_type(rows)
@@ -26,11 +27,10 @@ class Question
     next_cell_down = rows[1][0]
     if next_cell_down == nil
   #=begin # uncomment this for doing top-two questions
-      next_row.each_index do |cell_index|
+      next_row.each_index do |col|
         # at each cell, see if the cell two to the right contains a 2, and the cell four to the right has a 3, etc.
         # this works best b/c sometimes scale questions start or end with other options, e.g., N/A, Don't Know
-        debugger
-        if next_row[cell_index].to_s.include?("1") && next_row[cell_index + 2].to_s.include?("2") && next_row[cell_index + 4].to_s.include?("3") && next_row[cell_index + 6].to_s.include?("4") && next_row[cell_index + 8].to_s.include?("5")
+        if next_row[col].to_s.include?("1") && next_row[col + 2].to_s.include?("2") && next_row[col + 4].to_s.include?("3") && next_row[col + 6].to_s.include?("4") && next_row[col + 8].to_s.include?("5")
           return TopTwo
         end
       end
@@ -44,17 +44,5 @@ class Question
   end
 end
 
-class TopTwo < Question
-  def initialize
-    
-  end
-end
 
-class Single < Question
-end
 
-class Rank < Question
-end
-
-class Table < Question
-end

@@ -6,7 +6,7 @@ require './lib/question.rb'
 ### start method definitions
 
 def question_header?(row)
-  row[0].to_s[0..6].match(/\d{1,2}\.\s.+/) != nil
+  row[0].to_s[0..6].match(/\d+\.\s.+/)
 end
 
 def find_questions(rows)
@@ -19,9 +19,11 @@ def find_questions(rows)
     begin
       if question_header?(rows[i])
         starts << i
-        # check to see if the next four rows are all empty
-      elsif rows[i][0] != nil && rows[i+1][0] == nil && rows[i+2][0] == nil && rows[i+3][0] == nil && rows[i + 4][0] == nil
-        ends << i
+        i += 2
+        until rows[i].all?(&:nil?)
+          i += 1
+        end
+        ends << i - 1
       end
       i += 1
     rescue NoMethodError => error
@@ -30,19 +32,17 @@ def find_questions(rows)
       break
     end
   end
-
-  starts.each_index do |x|
-    @starts_ends << [starts[x], ends[x]]
-  end
+  # debugger
+  @starts_ends = starts.zip(ends)
 end
 
 def split_questions
   @starts_ends.each do |start, finish|
-    question = []
+    question_rows = []
     @rows[start..finish].each do |row|
-      question << row
+      question_rows << row
     end
-    @questions_by_arr << question
+    @questions_by_arr << question_rows
   end
 end
 
@@ -82,85 +82,85 @@ end
 
 
 
-def get_question_values(type, question)
-  @values = []
-  if type == :single # for SINGLE
-    @v_start = 2
-    @v_end = 0
-    @n = 0 # sample size - will be for a :single type Q
-    # get final question value position (@v_end)
-    question.each do |row|
-      if row[0].nil?
-        break
-      else
-        @v_end += 1
-      end
-    end
-    # get @n 
-    question.each do |row|
-      if row[0] == "Total Responses"
-        @n = row[1].to_i
-        break
-      end
-    end
-    # get values by going down the left-most column (until you hit nil)
-    question[@v_start...@v_end].each do |row|
-      v = Hash.new
-      v[:name] = row[0]
-      v[:count] = row[1].to_i
-      v[:n] = @n
-      v[:p] = v[:count].to_f / v[:n].to_f
-      @values << v
-    end
-  elsif type == :rank # for RANK - looks a lot like single
-    @v_start = 2
-    @v_end = 0
-    @n = 0 # sample size - will be for a :single type Q
-    # get final question value position and @n
-    question.each do |row|
-      if row[0].include? "total_responses_text"
-          @n = row[0].match(/\d+/)[0].to_i
-        break
-      else
-        @v_end += 1
-      end
-    end
-    # get values by going down the left-most column (until you hit nil)
-    question[@v_start...@v_end].sort.each do |row|
-      v = Hash.new
-      # break if row.compact == [] <- use this if you don't have v_end
-      v[:name] = row[0]
-      v[:rank] = row[2].to_i
-      v[:n] = @n
-      @values << v
-    end
-  elsif type == :top_two # for TOP-TWO type
-    @four = 0
-    @five = 0
-    @responses = 0
-
-    # get indices of columns containing top-two picks
-    question[1].each_index do |i|
-      # some 
-      if question[1][i].to_s.include?("4") && question[1][i+2].to_s.include?("5")
-        @four = i + 1
-        @five = i + 3
-      elsif question[1][i].to_s == "Responses"
-        @responses = i
-      end
-    end
-
-    question[3..-1].each do |row|
-      v = Hash.new
-      v[:name] = row[0]
-      v[:count] = row[@four].to_i + row[@five].to_i
-      v[:n] = row[@responses].to_i
-      v[:p] = v[:count].to_f / v[:n].to_f
-      @values << v
-    end
-  end
-  @values
-end
+# def get_question_values(type, question)
+#   @values = []
+#   if type == :single # for SINGLE
+#     # @v_start = 2
+# #     @v_end = 0
+# #     @n = 0 # sample size - will be for a :single type Q
+# #     # get final question value position (@v_end)
+# #     question.each do |row|
+# #       if row[0].nil?
+# #         break
+# #       else
+# #         @v_end += 1
+# #       end
+# #     end
+# #     # get @n 
+# #     question.each do |row|
+# #       if row[0] == "Total Responses"
+# #         @n = row[1].to_i
+# #         break
+# #       end
+# #     end
+# #     # get values by going down the left-most column (until you hit nil)
+# #     question[@v_start...@v_end].each do |row|
+# #       v = Hash.new
+# #       v[:name] = row[0]
+# #       v[:count] = row[1].to_i
+# #       v[:n] = @n
+# #       v[:p] = v[:count].to_f / v[:n].to_f
+# #       @values << v
+# #     end
+#   elsif type == :rank # for RANK - looks a lot like single
+#     # @v_start = 2
+#     # @v_end = 0
+#     # @n = 0 # sample size - will be for a :single type Q
+#     # # get final question value position and @n
+#     # # question.each do |row|
+#     # #   if row[0].include? "total_responses_text"
+#     # #       @n = row[0].match(/\d+/)[0].to_i
+#     # #     break
+#     # #   else
+#     # #     @v_end += 1
+#     # #   end
+#     # # end
+#     # # get values by going down the left-most column (until you hit nil)
+#     # question[@v_start...@v_end].sort.each do |row|
+#     #   v = Hash.new
+#     #   # break if row.compact == [] <- use this if you don't have v_end
+#     #   v[:name] = row[0]
+#     #   v[:rank] = row[2].to_i
+#     #   v[:n] = @n
+#     #   @values << v
+#     # end
+#   elsif type == :top_two # for TOP-TWO type
+#     # @four = 0
+# #     @five = 0
+# #     @responses = 0
+# # 
+# #     # get indices of columns containing top-two picks
+# #     question[1].each_index do |i|
+# #       # some 
+# #       if question[1][i].to_s.include?("4") && question[1][i+2].to_s.include?("5")
+# #         @four = i + 1
+# #         @five = i + 3
+# #       elsif question[1][i].to_s == "Responses"
+# #         @responses = i
+# #       end
+# #     end
+# # 
+# #     question[3..-1].each do |row|
+# #       v = Hash.new
+# #       v[:name] = row[0]
+# #       v[:count] = row[@four].to_i + row[@five].to_i
+# #       v[:n] = row[@responses].to_i
+# #       v[:p] = v[:count].to_f / v[:n].to_f
+# #       @values << v
+# #     end
+#   end
+#   @values
+# end
 
 def get_table_question_values(options, subquestion)
   @values = []
@@ -201,7 +201,7 @@ demos.each do |demo|
   p "#{@questions_by_arr.count} questions to parse"
 
   # this method extracts relevant question data into a hash for each question
-  @questions_by_arr.each do |question|
+  @questions_by_arr.map do |question|
     quest = Question.parse_row_data(question)
     # q[:number] = get_question_number(question[0])
   #   q[:question] = question[0][0]
@@ -210,50 +210,50 @@ demos.each do |demo|
     # :table type questions are tricky, since they have many multiple-choice questions
     # within them. These get sorted out first, and the rest follow up in the 'else' statement
     # this includes "top_two" questions as table questions, but you still get the 'top-two' results below
-    if quest.type == :table || quest.type == :top_two
+    # if quest.type == :table || quest.type == :top_two
+#     
+#       parent_num = q[:number]
+#       parent_question = q[:question]
+#       # get column indices for answer options
+#       # as well as answer strings
+#       options = []
+#       question[1].each_index do |i|
+#         if !question[1][i].nil?
+#           options << [i, question[1][i]]
+#         end
+#       end
+#     
+#       i = 1
+#       first = true
+#     
+#       # if it's a normal table, starting row is 2. If it's a top_two, starting row is 3.
+#       q[:type] == :top_two ? starting_row = 3 : starting_row = 2
+#     
+#       question[starting_row..-1].each_with_index do |subquestion, idx|
+#         next if subquestion[0].nil?
+#         
+#         s = Hash.new
+#         s[:number] = parent_num + ".#{i}"
+#         s[:type] = :multi
+#         if first == true
+#           
+#           s[:question] = parent_question + "::" + subquestion[0]
+#         else
+#           # this cuts off the parent_question title after 50 characters, then adds the subquestion title on the end
+#           # e.g., "15.2 - How would you compare each amenity to WiFi as a...::Magazines"
+#           s[:question] = parent_question[0..50] + "...::" + subquestion[0]
+#         end
+#         s[:values] = get_table_question_values(options, subquestion)
+#         @questions_by_hash << s
+#         i += 1
+#         first = false
+#       end
+#     end
     
-      parent_num = q[:number]
-      parent_question = q[:question]
-      # get column indices for answer options
-      # as well as answer strings
-      options = []
-      question[1].each_index do |i|
-        if !question[1][i].nil?
-          options << [i, question[1][i]]
-        end
-      end
-    
-      i = 1
-      first = true
-    
-      # if it's a normal table, starting row is 2. If it's a top_two, starting row is 3.
-      q[:type] == :top_two ? starting_row = 3 : starting_row = 2
-    
-      question[starting_row..-1].each_with_index do |subquestion, idx|
-        next if subquestion[0].nil?
-        
-        s = Hash.new
-        s[:number] = parent_num + ".#{i}"
-        s[:type] = :multi
-        if first == true
-          
-          s[:question] = parent_question + "::" + subquestion[0]
-        else
-          # this cuts off the parent_question title after 50 characters, then adds the subquestion title on the end
-          # e.g., "15.2 - How would you compare each amenity to WiFi as a...::Magazines"
-          s[:question] = parent_question[0..50] + "...::" + subquestion[0]
-        end
-        s[:values] = get_table_question_values(options, subquestion)
-        @questions_by_hash << s
-        i += 1
-        first = false
-      end
-    end
-    
-    if q[:type] != :table
-      q[:values] = get_question_values(q[:type], question)
-      @questions_by_hash << q
-    end
+    # if q[:type] != :table
+    #   q[:values] = get_question_values(q[:type], question)
+    #   @questions_by_hash << q
+    # end
   end
 
   two_p_test = []
