@@ -1,6 +1,7 @@
 require 'csv'
 require 'date'
 require 'debugger'
+require './lib/question.rb'
 
 ### start method definitions
 
@@ -24,7 +25,7 @@ def find_questions(rows)
       end
       i += 1
     rescue NoMethodError => error
-      puts "Reached end of file: " + e
+      puts "Reached end of file: " + error.message
       ends << (i - 1)
       break
     end
@@ -46,9 +47,9 @@ def split_questions
 end
 
 
-def get_question_number(first_row)
-  number = first_row[0].match(/\d{1,2}/)[0]
-end
+# def get_question_number(first_row)
+#   first_row[0].match(/\d{1,2}/)[0]
+# end
 
 
 def get_question_text(string)
@@ -57,27 +58,27 @@ def get_question_text(string)
 end
 
 
-def get_question_type(question)
-  next_row = question[1]
-  next_cell_down = question[1][0]
-  if next_cell_down == nil
-#=begin # uncomment this for doing top-two questions
-    next_row.each_index do |cell_index|
-      # at each cell, see if the cell two to the right contains a 2, and the cell four to the right has a 3, etc.
-      # this works best b/c sometimes scale questions start or end with other options, e.g., N/A, Don't Know
-      if next_row[cell_index].to_s.include?("1") && next_row[cell_index + 2].to_s.include?("2") && next_row[cell_index + 4].to_s.include?("3") && next_row[cell_index + 6].to_s.include?("4") && next_row[cell_index + 8].to_s.include?("5")
-        return :top_two
-      end
-    end
-#=end
-    :table
-  elsif next_cell_down == "Value"
-    :single
-  elsif next_cell_down == "Item"
-    :rank
-  end
-  # are there other question types that would be good to list here?
-end
+# def get_question_type(question)
+#   next_row = question[1]
+#   next_cell_down = question[1][0]
+#   if next_cell_down == nil
+# #=begin # uncomment this for doing top-two questions
+#     next_row.each_index do |cell_index|
+#       # at each cell, see if the cell two to the right contains a 2, and the cell four to the right has a 3, etc.
+#       # this works best b/c sometimes scale questions start or end with other options, e.g., N/A, Don't Know
+#       if next_row[cell_index].to_s.include?("1") && next_row[cell_index + 2].to_s.include?("2") && next_row[cell_index + 4].to_s.include?("3") && next_row[cell_index + 6].to_s.include?("4") && next_row[cell_index + 8].to_s.include?("5")
+#         return :top_two
+#       end
+#     end
+# #=end
+#     :table
+#   elsif next_cell_down == "Value"
+#     :single
+#   elsif next_cell_down == "Item"
+#     :rank
+#   end
+#   # are there other question types that would be good to list here?
+# end
 
 
 
@@ -201,15 +202,15 @@ demos.each do |demo|
 
   # this method extracts relevant question data into a hash for each question
   @questions_by_arr.each do |question|
-    q = Hash.new
-    q[:number] = get_question_number(question[0])
-    q[:question] = question[0][0]
-    q[:type] = get_question_type(question)
+    quest = Question.parse_row_data(question)
+    # q[:number] = get_question_number(question[0])
+  #   q[:question] = question[0][0]
+  #   q[:type] = get_question_type(question)
 
     # :table type questions are tricky, since they have many multiple-choice questions
     # within them. These get sorted out first, and the rest follow up in the 'else' statement
     # this includes "top_two" questions as table questions, but you still get the 'top-two' results below
-    if q[:type] == :table || q[:type] == :top_two
+    if quest.type == :table || quest.type == :top_two
     
       parent_num = q[:number]
       parent_question = q[:question]
