@@ -1,10 +1,18 @@
 class Question
-  attr_reader :sample_size
+  attr_reader :sample_size, :values
   
   def initialize(name, number, rows)
     @name, @number, @rows = name, number, rows
     @sample_size = 0
-    @values = get_values
+    begin
+      @values = get_values
+    rescue ArgumentError => e
+      debugger
+      retry
+    rescue => e
+      debugger
+      retry
+    end
   end
   
   def add_value(name, count)
@@ -13,10 +21,17 @@ class Question
     val
   end
   
+  def inspect
+    "Question: #{@number}, #{@name[0..25]}, Values: #{@values.count}"
+  end
+  
+  def to_s
+    
+  end
   # write factory methods here
   
   def self.parse_row_data(rows)
-    number = rows[0][0].match(/\d/)[0]
+    number = rows[0][0].match(/\d+/)[0]
     name = rows[0][0]
     type = Question.parse_type(rows)
     type.new(name, number, rows)

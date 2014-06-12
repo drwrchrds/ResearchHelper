@@ -47,120 +47,11 @@ def split_questions
 end
 
 
-# def get_question_number(first_row)
-#   first_row[0].match(/\d{1,2}/)[0]
-# end
-
-
 def get_question_text(string)
   digits_to_drop = string.match(/\d{1,2}/)[0].length + 2
   text = string.split('').drop(digits_to_drop).join('')
 end
 
-
-# def get_question_type(question)
-#   next_row = question[1]
-#   next_cell_down = question[1][0]
-#   if next_cell_down == nil
-# #=begin # uncomment this for doing top-two questions
-#     next_row.each_index do |cell_index|
-#       # at each cell, see if the cell two to the right contains a 2, and the cell four to the right has a 3, etc.
-#       # this works best b/c sometimes scale questions start or end with other options, e.g., N/A, Don't Know
-#       if next_row[cell_index].to_s.include?("1") && next_row[cell_index + 2].to_s.include?("2") && next_row[cell_index + 4].to_s.include?("3") && next_row[cell_index + 6].to_s.include?("4") && next_row[cell_index + 8].to_s.include?("5")
-#         return :top_two
-#       end
-#     end
-# #=end
-#     :table
-#   elsif next_cell_down == "Value"
-#     :single
-#   elsif next_cell_down == "Item"
-#     :rank
-#   end
-#   # are there other question types that would be good to list here?
-# end
-
-
-
-# def get_question_values(type, question)
-#   @values = []
-#   if type == :single # for SINGLE
-#     # @v_start = 2
-# #     @v_end = 0
-# #     @n = 0 # sample size - will be for a :single type Q
-# #     # get final question value position (@v_end)
-# #     question.each do |row|
-# #       if row[0].nil?
-# #         break
-# #       else
-# #         @v_end += 1
-# #       end
-# #     end
-# #     # get @n 
-# #     question.each do |row|
-# #       if row[0] == "Total Responses"
-# #         @n = row[1].to_i
-# #         break
-# #       end
-# #     end
-# #     # get values by going down the left-most column (until you hit nil)
-# #     question[@v_start...@v_end].each do |row|
-# #       v = Hash.new
-# #       v[:name] = row[0]
-# #       v[:count] = row[1].to_i
-# #       v[:n] = @n
-# #       v[:p] = v[:count].to_f / v[:n].to_f
-# #       @values << v
-# #     end
-#   elsif type == :rank # for RANK - looks a lot like single
-#     # @v_start = 2
-#     # @v_end = 0
-#     # @n = 0 # sample size - will be for a :single type Q
-#     # # get final question value position and @n
-#     # # question.each do |row|
-#     # #   if row[0].include? "total_responses_text"
-#     # #       @n = row[0].match(/\d+/)[0].to_i
-#     # #     break
-#     # #   else
-#     # #     @v_end += 1
-#     # #   end
-#     # # end
-#     # # get values by going down the left-most column (until you hit nil)
-#     # question[@v_start...@v_end].sort.each do |row|
-#     #   v = Hash.new
-#     #   # break if row.compact == [] <- use this if you don't have v_end
-#     #   v[:name] = row[0]
-#     #   v[:rank] = row[2].to_i
-#     #   v[:n] = @n
-#     #   @values << v
-#     # end
-#   elsif type == :top_two # for TOP-TWO type
-#     # @four = 0
-# #     @five = 0
-# #     @responses = 0
-# # 
-# #     # get indices of columns containing top-two picks
-# #     question[1].each_index do |i|
-# #       # some 
-# #       if question[1][i].to_s.include?("4") && question[1][i+2].to_s.include?("5")
-# #         @four = i + 1
-# #         @five = i + 3
-# #       elsif question[1][i].to_s == "Responses"
-# #         @responses = i
-# #       end
-# #     end
-# # 
-# #     question[3..-1].each do |row|
-# #       v = Hash.new
-# #       v[:name] = row[0]
-# #       v[:count] = row[@four].to_i + row[@five].to_i
-# #       v[:n] = row[@responses].to_i
-# #       v[:p] = v[:count].to_f / v[:n].to_f
-# #       @values << v
-# #     end
-#   end
-#   @values
-# end
 
 def get_table_question_values(options, subquestion)
   @values = []
@@ -201,7 +92,7 @@ demos.each do |demo|
   p "#{@questions_by_arr.count} questions to parse"
 
   # this method extracts relevant question data into a hash for each question
-  @questions_by_arr.map do |question|
+  @questions_by_arr.map! do |question|
     quest = Question.parse_row_data(question)
     # q[:number] = get_question_number(question[0])
   #   q[:question] = question[0][0]
@@ -256,9 +147,8 @@ demos.each do |demo|
     # end
   end
 
-  two_p_test = []
   # do this with an array?
-
+  debugger
   CSV.open("sg_out/#{demo}", "wb") do |row|
     row << [nil, "#{demo.chomp('.')}", DateTime.now]
     row << [nil, "p/rank", "n"]

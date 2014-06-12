@@ -27,21 +27,27 @@ class TopTwo < Question
     val = Value.new(name, count)
     val.question = self
     val.sample = sample
+    val
   end
   
   private
   
-  def extract_four_five_total(row)
-    four_col, five_col, total_responses_col = nil, nil, nil
+    def extract_four_five_total(row)
+      four_col, five_col, total_responses_col = nil, nil, nil
     
-    row.each_with_index do |col, idx|
-      debugger
-      if col && col.match('4')
-        four_col = idx + 1
-        five_col = idx + 3
-        total_responses_col = idx + 5
+      row.each_with_index do |col, idx|
+        next unless col
+        
+        # grab indices of '4' and '5'
+        if col.match('4')
+          four_col = idx + 1
+          five_col = idx + 3
+        end
+      
+        if col.match('Responses')
+          total_responses_col = idx
+        end
       end
+      [four_col, five_col, total_responses_col]
     end
-    [four_col, five_col, total_responses_col]
-  end
 end
