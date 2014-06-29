@@ -1,5 +1,5 @@
 class Question
-  attr_reader :sample_size, :values
+  attr_reader :sample_size, :values, :name, :number
   
   def initialize(name, number, rows)
     @name, @number, @rows = name, number, rows
@@ -21,20 +21,29 @@ class Question
     val
   end
   
+  def values
+    @values ||= []
+  end
+  
   def inspect
-    "Question: #{@number}, #{@name[0..25]}, Values: #{@values.count}"
+    "<Question: #{number}, #{name[0..25]}, Values: #{values.count}>"
   end
   
   def to_s
     
   end
-  # write factory methods here
   
   def self.parse_row_data(rows)
     number = rows[0][0].match(/\d+/)[0]
     name = rows[0][0]
     type = Question.parse_type(rows)
-    type.new(name, number, rows)
+    question = type.new(name, number, rows)
+    
+    if type == Table
+      *question.subquestions
+    else
+      question
+    end
   end
   
   def self.parse_type(rows)
