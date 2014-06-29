@@ -40,9 +40,11 @@ class Question
     question = type.new(name, number, rows)
     
     if type == Table
-      *question.subquestions
+      # return subquestions if type is Table
+      question.subquestions
     else
-      question
+      # must return question in array for Array#concat
+      [question]
     end
   end
   

@@ -8,9 +8,13 @@ class Rank < Question
         row = @rows[value_at]
         name = row[0]
         break if name.match('total_responses_text:')
-        weight = Integer(row[1])
-        values << add_value(name, weight)
-      
+        count = Integer(row[1])
+        rank = Integer(row[2])
+        
+        value = RankValue.new(name, count, rank)
+        value.question = self
+        values << value
+        
         value_at += 1
       end
     rescue => e

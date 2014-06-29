@@ -42,7 +42,7 @@ def split_questions
     @rows[start..finish].each do |row|
       question_rows << row
     end
-    @questions << question_rows
+    @question_row_sets << question_rows
   end
 end
 
@@ -65,38 +65,39 @@ demos.each do |demo|
   contents = CSV.open "sg_in/#{demo}", "r:ISO-8859-1"
   @rows = []
   @starts_ends = []
-  @questions = []
+  @question_row_sets = []
 
-  # these three methods populate @questions with each question
+  # these three methods populate @question_row_sets with each question
   contents.each do |row|
     @rows << row
   end
   puts demo
   find_questions(@rows)
   split_questions
-  p "#{@questions.count} questions to parse"
+  p "#{@question_row_sets.count} questions to parse"
 
   # get question objects
-  @questions.map! do |question|
-    Question.parse_row_data(question)
+  questions = []
+  @question_row_sets.each do |question|
+    questions.concat(Question.parse_row_data(question))
   end
 
-  debugger
-  CSV.open("sg_out/#{demo}", "wb") do |row|
-    row << [nil, "#{demo.chomp('.')}", DateTime.now]
-    row << [nil, "p/rank", "n"]
+
+  CSV.open("sg_out/#{demo}", "wb") do |rows|
+    rows << [nil, "#{demo.chomp('.')}", DateTime.now]
+    rows << [nil, "p/rank", "n"]
     
-    @questions.each do |question|
-      row << [hash[:number] + " - " + get_question_text(hash[:question])]
-      row << [hash[:type].to_s]
-      hash[:values].each do |value|
-        if hash[:type] == :rank
-          row << [value[:name], value[:rank], value[:n]]
+    questions.each do |question|
+      rows << [question.name]
+      rows << [question.class.to_s]
+      question.values.each do |value|
+        if question.class == Rank
+          rows << [value.name, value.rank, value.count]
         else
-          row << [value[:name], value[:p], value[:n]]
+          rows << [value.name, value.proportion, value.count]
         end
       end
-      row << []
+      rows << []
     end
   end
 

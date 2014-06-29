@@ -1,26 +1,46 @@
 class Table < Question
-  attr_reader :subquestions
+  attr_reader :options
   
-  def initialize
+  def initialize(name, number, rows)
     @name, @number, @rows = name, number, rows
-    @subquestions = get_subquestions
+    @options = get_options
+    @values = nil
+    get_subquestions
+  end
+  
+  def subquestions
+    @subquestions ||= []
+  end
+  
+  def get_options
+    options = []
+    @rows[1].each_with_index do |cell, idx|
+      next unless cell
+      options << [idx, cell]
+    end
+    options
   end
   
   def get_subquestions
-    # def get_table_question_values(options, subquestion)
-#       @values = []
-#       @n = subquestion[options.last[0]].to_i
-#
-#       options[0..-2].each_index do |i|
-#         v = Hash.new
-#         v[:name] = options[i][1]
-#         v[:count] = subquestion[options[i][0] + 1].to_i # get i + 1 to get next column (count instead of %)
-#         v[:n] = @n
-#         v[:p] = v[:count].to_f / v[:n].to_f
-#         # p "#{v[:name]} - count: #{v[:count]} n: #{v[:n]} p: #{v[:p]}"
-#         @values << v
-#       end
-#       @values
-#     end
+    starting_row = 2
+  
+    num = 1
+    @rows.each_with_index do |sub_rows, idx|
+      next if idx < 2
+      next if sub_rows[0].nil?
+      
+      # get full parent name only on first subquestion
+      sub_number = @number + ".#{num}"
+      sub_name = @name.dup.gsub(@number + '.', sub_number)
+      if num != 1
+        sub_name = sub_name[0..50] + '...'
+      end
+      sub_name += "::#{sub_rows[0]}"
+      
+      self.subquestions << Subquestion.new(sub_name, sub_number,
+            sub_rows, self)
+
+      num += 1
+    end
   end
 end
