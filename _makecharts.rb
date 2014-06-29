@@ -1,15 +1,13 @@
 require 'csv'
+require 'debugger'
 
 # GOAL: a CSV with the questions on the left
 # each test-group is a column
 # for each column, put all significant demographics and + or -
 
-worksheet = []
 
-contents = CSV.open "mathdone.csv", "r:ISO-8859-1"
-contents.each do |row|
-  worksheet << row
-end
+contents = CSV.open "significance_calculations.csv", "r:ISO-8859-1"
+worksheet = contents.to_a
 
 # make one-column array of questions
 questions = []
@@ -24,9 +22,8 @@ worksheet[0].each_index do |i|
   x = worksheet[0][i]
   p "x is #{x}"
 
-  if x.nil? || x.match(/([0-9a-z]+)(\_)([0-9a-z]+)/).nil?
-    next
-  end
+  next if x.nil? || x.match(/([0-9a-z]+)(\_)([0-9a-z]+)/).nil?
+
   skip = false
   
   m = x.match(/([0-9a-z]+)(\_)([0-9a-z]+)/)
@@ -45,7 +42,7 @@ worksheet[0].each_index do |i|
   next if skip == true
   d = Hash.new
   d[:demo] = m[1].to_sym
-  d[:segments] = {m[3].to_sym => i}
+  d[:segments] = { m[3].to_sym => i }
   @demos << d
 end
 
@@ -70,9 +67,10 @@ end
       row = worksheet[i]
       cell = []
       demo[:segments].each do |segment, index|
-        if row[index + 3] == "TRUE"
+
+        if row[index + 3] == 'true'
           # condition ? if_true : if_false
-          row[index + 2].to_i > 0 ? sign = "+" : sign = "-"
+          sign = (row[index + 2].to_i > 0 ? "+" : "-")
           cell << segment.to_s.upcase + sign
         end
       end

@@ -4,16 +4,24 @@
 
 
 require 'csv'
-
+require 'debugger'
 data = []
-CSV.foreach "sg_out/!alldata.csv" do |row|
-data << [row[0],row[1], row[2]] # collect the first 3 columns from '!alldata.csv'
+begin
+  CSV.foreach("sg_out/!alldata.csv", encoding: "ISO8859-1") do |row|
+    data << [row[0],row[1], row[2]] # collect the first 3 columns from '!alldata.csv'
+  end
+rescue => e
+  puts e
 end
 p "imported !alldata.csv successfully. Now importing summarycharts.csv"
 
-summarycharts = []
-CSV.foreach "summarycharts.csv" do |row|
-summarycharts << row
+begin
+  summarycharts = []
+  CSV.foreach("summarycharts.csv", encoding: "ISO8859-1") do |row|
+    summarycharts << row
+  end
+rescue => e
+  puts e
 end
 p "imported summarycharts.csv successfully. Did you input shortcut names?"
 
@@ -31,7 +39,7 @@ summarycharts[2..-1].each do |row| # "summarycharts[2..-1]" pulls every row afte
   keys = []
   #p row[1..-1]
   for i in 1..(row.count-1) # this moves through every index after 0, and retrieves the "shortcut" if the cell is NOT nil
-    if row[i]
+    if row[i] != ""
       keys << shortcuts[i]
     end
   end

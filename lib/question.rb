@@ -28,11 +28,7 @@ class Question
   def inspect
     "<Question: #{number}, #{name[0..25]}, Values: #{values.count}>"
   end
-  
-  def to_s
-    
-  end
-  
+
   def self.parse_row_data(rows)
     number = rows[0][0].match(/\d+/)[0]
     name = rows[0][0]
@@ -43,7 +39,7 @@ class Question
       # return subquestions if type is Table
       question.subquestions
     else
-      # must return question in array for Array#concat
+      # must return question in an array
       [question]
     end
   end

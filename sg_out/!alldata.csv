@@ -1,0 +1,1084 @@
+,!alldata.csv,2014-06-29T14:36:39-07:00
+,p/rank,n
+1. What is your title?
+Single
+"Principal (e.g., owner, founder, partner, CEO, president, etc.)",1.0,535
+Vice President or Director,0.0,0
+Manager,0.0,0
+Individual contributor,0.0,0
+
+2. How many full-time employees does your company have?
+Single
+19-Jan,0.424812030075188,226
+20-99,0.38345864661654133,204
+100-500,0.19172932330827067,102
+More than 500,0.0,0
+
+3. What is your gender?
+Single
+Male,0.5200764818355641,272
+Female,0.47992351816443596,251
+
+4. What is your age?
+Single
+Under 18,0.0,0
+18-34,0.21428571428571427,114
+35-49,0.34774436090225563,185
+50-64,0.3383458646616541,180
+Over 64,0.09962406015037593,53
+
+5. In which state is your company headquartered?
+Single
+Alabama,0.009363295880149813,5
+Alaska,0.0,0
+Arizona,0.033707865168539325,18
+Arkansas,0.0018726591760299626,1
+California,0.13670411985018727,73
+Colorado,0.013108614232209739,7
+Connecticut,0.0149812734082397,8
+Delaware,0.0018726591760299626,1
+Florida,0.08801498127340825,47
+Georgia,0.028089887640449437,15
+Hawaii,0.003745318352059925,2
+Idaho,0.009363295880149813,5
+Illinois,0.056179775280898875,30
+Indiana,0.020599250936329586,11
+Iowa,0.003745318352059925,2
+Kansas,0.00749063670411985,4
+Kentucky,0.00749063670411985,4
+Louisiana,0.00749063670411985,4
+Maine,0.0,0
+Maryland,0.009363295880149813,5
+Massachusetts,0.02247191011235955,12
+Michigan,0.016853932584269662,9
+Minnesota,0.0018726591760299626,1
+Mississippi,0.0056179775280898875,3
+Missouri,0.02247191011235955,12
+Montana,0.0018726591760299626,1
+Nebraska,0.0,0
+Nevada,0.0018726591760299626,1
+New Hampshire,0.0,0
+New Jersey,0.05056179775280899,27
+New Mexico,0.003745318352059925,2
+New York,0.09176029962546817,49
+North Carolina,0.03745318352059925,20
+North Dakota,0.0056179775280898875,3
+Ohio,0.031835205992509365,17
+Oklahoma,0.0056179775280898875,3
+Oregon,0.028089887640449437,15
+Pennsylvania,0.056179775280898875,30
+Rhode Island,0.0018726591760299626,1
+South Carolina,0.00749063670411985,4
+South Dakota,0.0,0
+Tennessee,0.011235955056179775,6
+Texas,0.08239700374531835,44
+Utah,0.00749063670411985,4
+Vermont,0.0,0
+Virginia,0.018726591760299626,10
+Washington,0.016853932584269662,9
+West Virginia,0.0056179775280898875,3
+Wisconsin,0.00749063670411985,4
+Wyoming,0.0018726591760299626,1
+District of Columbia,0.0018726591760299626,1
+
+6. Which best describes your industry?
+Single
+Accommodation & food service,0.034482758620689655,18
+"Administrative, support, waste management & remediation service",0.01532567049808429,8
+"Arts, entertainment & recreation",0.07854406130268199,41
+Construction,0.08045977011494253,42
+Educational services,0.04980842911877394,26
+Finance & insurance,0.05747126436781609,30
+Health care & social assistance,0.05363984674329502,28
+Information technology,0.06130268199233716,32
+"Local, state or federal government (any kind)",0.0,0
+Management of companies & enterprises,0.011494252873563218,6
+Manufacturing,0.04980842911877394,26
+Mining,0.0,0
+Other services (except public administration),0.10727969348659004,56
+Professional services,0.15900383141762453,83
+Scientific & technical services,0.017241379310344827,9
+"Real estate, rental & leasing",0.05363984674329502,28
+Retail trade,0.1111111111111111,58
+Transportation & warehousing,0.017241379310344827,9
+Utilities,0.009578544061302681,5
+Wholesale trade,0.032567049808429116,17
+Not currently working,0.0,0
+
+7. How long has your company been in business?
+Single
+Less than one year,0.02443609022556391,13
+One to five years,0.21804511278195488,116
+Six to 10 years,0.27631578947368424,147
+More than 10 years,0.48120300751879697,256
+
+"8. What is your revenue outlook for 2014, compared to 2013?"
+Single
+Up by 10% or more,0.3587360594795539,193
+"Up, by less than 10%",0.2695167286245353,145
+Same as 2013,0.258364312267658,139
+"Down, by less than 10%",0.05762081784386617,31
+Down by more than 10%,0.055762081784386616,30
+
+"9. Roughly what percent of your work time do you spend conducting business via a smartphone (e.g., an iPhone or Samsung Galaxy) and/or tablet (e.g., an iPad)?"
+Single
+None,0.21415270018621974,115
+Up to 25%,0.35940409683426444,193
+25% to 49%,0.1973929236499069,106
+50% to 74%,0.1601489757914339,86
+75% to 99%,0.055865921787709494,30
+100% - I only do business on my smartphone and/or tablet,0.01303538175046555,7
+
+10. Which of the following transactions does your business handle on smartphones and/or tablets? (select all that apply)
+Single
+Returns / exchanges,0.11888782358581017,124
+Capture customer contact information,0.2483221476510067,259
+Email receipts,0.25119846596356665,262
+Check inventory availability,0.17641418983700863,184
+None of the above,0.1629913710450623,170
+I don’t know,0.0028763183125599234,3
+Other (please describe),0.039309683604985615,41
+
+"11. On a scale of 1 (not at all important) to 5 (very important), please rate each of these items:"
+TopTwo
+Smartphones and tablets for my business,0.5738317757009346,307
+Virus and malware protection for my business,0.7490636704119851,400
+Virus and malware protection for my smartphones and/or tablets,0.6560747663551402,351
+Keeping data safe on smartphones and tablets,0.6924528301886792,367
+Preventing smartphones and tablets from being lost or stolen,0.7156308851224106,380
+Restricting employees' personal use of business smartphones and tablets,0.45300751879699247,241
+Making my team more productive and saving costs by using more smartphones and tablets,0.5411985018726592,289
+The information security policies of a vendor (such as a CPA or payroll service provider) as a factor in choosing / working with that vendor,0.5849056603773585,310
+
+12. Do you provide smartphones or tablets to employees or contractors?
+Single
+"Yes, for use during working hours only",0.31784386617100374,171
+"Yes, for employees / contractors to take home (personal use permitted)",0.22862453531598512,123
+No,0.45353159851301117,244
+
+13. What kinds of smartphones / tablets do you provide to employees or contractors? (select all that apply)
+Single
+iOS,0.3238095238095238,136
+Android,0.4785714285714286,201
+Windows,0.17142857142857143,72
+"Other (e.g., BlackBerry)",0.02619047619047619,11
+
+"15. On average, how many total devices (i.e., desktop computer / workstation, laptop / portable PC, smartphone, tablet) does each of your employees typically use on a daily basis for work purposes?"
+Single
+None,0.09851301115241635,53
+One,0.3066914498141264,165
+Two,0.35687732342007433,192
+Three,0.14312267657992564,77
+Four,0.027881040892193308,15
+Five or more,0.06691449814126393,36
+
+16.1 Please answer each of the following questions yes or no:::Do you feel that small businesses are more prone / vulnerable to attack from cybercriminals than mid-sized or large businesses are?
+Subquestion
+Yes,0.4373831775700935,234
+No,0.5626168224299065,301
+
+16.2 Please answer each of the following questions ...::Does your company have a security policy regarding using smartphones / tablets for business purposes?
+Subquestion
+Yes,0.5869158878504673,314
+No,0.4130841121495327,221
+
+16.3 Please answer each of the following questions ...::Does your company have a plan to deal with a lost or stolen company-issued smartphone / tablet?
+Subquestion
+Yes,0.5977443609022557,318
+No,0.40225563909774437,214
+
+"16.4 Please answer each of the following questions ...::Have your employees ever lost a company-issued smartphone / tablet, or had one stolen?"
+Subquestion
+Yes,0.28785046728971964,154
+No,0.7121495327102804,381
+
+16.5 Please answer each of the following questions ...::Do you plan to use more tablets or “phablets” in the next year in your business?
+Subquestion
+Yes,0.49625468164794007,265
+No,0.5037453183520599,269
+
+16.6 Please answer each of the following questions ...::Do you or your employees keep customer information on smartphones / tablets?
+Subquestion
+Yes,0.5461393596986818,290
+No,0.4538606403013183,241
+
+16.7 Please answer each of the following questions ...::Do you believe that the use of smartphones / tablets in your company creates a security risk?
+Subquestion
+Yes,0.4608208955223881,247
+No,0.539179104477612,289
+
+16.8 Please answer each of the following questions ...::Is the information that you or your employees store on smartphones / tablets important to conducting your business?
+Subquestion
+Yes,0.6448598130841121,345
+No,0.35514018691588783,190
+
+16.9 Please answer each of the following questions ...::Do you use a security product on your smartphones / tablets today to protect against malware and / or theft or loss?
+Subquestion
+Yes,0.6067415730337079,324
+No,0.39325842696629215,210
+
+16.10 Please answer each of the following questions...::Do you see any value in having a security product on your smartphones / tablets?
+Subquestion
+Yes,0.6985018726591761,373
+No,0.301498127340824,161
+
+16.11 Please answer each of the following questions...::Do you feel you have a good understanding of how your employees use their smartphones / tablets for work?
+Subquestion
+Yes,0.7849056603773585,416
+No,0.21509433962264152,114
+
+17. Did your lost or stolen company-issued smartphone/tablet result in a breach or data theft?
+Single
+Yes,0.273972602739726,40
+No,0.726027397260274,106
+
+"18. In general, where would you say you first learn about new products and services for your business? (rank from most to least important)"
+Rank
+"Direct from vendors – e.g., email, websites, trade shows, sales call from representative, etc.",1,3322
+Business news media / review sites / blogs,2,2966
+Other business owners / peers / colleagues,3,2621
+"My internal team – e.g., my IT manager, financial manager, HR manager, etc.",4,2551
+In a store,5,2432
+"My external team – e.g., my accountant, attorney or local technology consultant / reseller",6,2274
+Analysts like Forrester or Gartner,7,1977
+Online forum / discussion board,8,1963
+Social media site,9,1646
+
+"19. On a scale of 1 (very unlikely) to 5 (very likely), please rate how likely you are to first learn about a product or service for your business via each of these specific sources / formats."
+TopTwo
+Analyst report,0.3320754716981132,176
+Audio podcast,0.25285171102661597,133
+Banner ad on a website,0.31001890359168244,164
+Blog,0.3493282149712092,182
+Call from or meeting with sales representative,0.46313799621928164,245
+Case study,0.35984848484848486,190
+eBook / guide / handbook,0.2935606060606061,155
+Email newsletter,0.5085066162570888,269
+Event or trade show,0.5217391304347826,276
+Facebook,0.3225806451612903,170
+Forum or discussion board,0.38022813688212925,200
+Google,0.29961832061068705,157
+Infographic,0.23518164435946462,123
+LinkedIn,0.3028571428571429,159
+Newspaper / magazine (print or online),0.46387832699619774,244
+One-off email,0.32633587786259544,171
+Outdoor billboard or signage,0.2633587786259542,138
+Peer / colleague,0.6482889733840305,341
+"Postcard, letter or catalog in the mail",0.3503787878787879,185
+Press release,0.3465909090909091,183
+Print newsletter,0.37093690248565964,194
+Product section of a vendor’s website,0.4752851711026616,250
+Radio,0.2567049808429119,134
+Research report,0.371868978805395,193
+Resource section of a vendor’s website,0.42610364683301344,222
+TV,0.3757115749525617,198
+Twitter,0.24761904761904763,130
+Video on vendor website,0.3365200764818356,176
+Webinar/webcast,0.30401529636711283,159
+White paper,0.29693486590038315,155
+YouTube,0.2777777777777778,145
+
+"22. Who do you rely on most for information, advice or recommendations when you are investigating new products or services for your business? (rank from most to least important)"
+Rank
+My internal team,1,1756
+Peers / colleagues,2,1633
+"My external team (e.g., accountant, attorney, consultant, tech vendor, etc.)",3,1513
+"Third-party experts, e.g., analysts, bloggers or reviewers",4,1303
+Vendors,5,1246
+
+"23. Once your company has decided to investigate a new product or service for your business, who typically leads the research? (select the closest answer)"
+Single
+Me,0.7355679702048417,395
+"The relevant manager / group (e.g. IT, sales, HR, etc.)",0.2085661080074488,112
+My office manager,0.035381750465549346,19
+An external consultant,0.0074487895716946,4
+Other (please describe),0.01303538175046555,7
+
+"24. On a scale of 1 (do not want at all) to 5 (want very much), please rate when you want to hear from a salesperson:"
+TopTwo
+After we first learn about a product or service,0.43609022556390975,232
+Once we are considering purchasing a product or service,0.6435272045028143,343
+Once we are ready to purchase a product or service,0.7429111531190926,393
+"On an ongoing basis, for example via occasional calls or emails",0.45075757575757575,238
+
+"25. When you do meet with a salesperson, please rate how much you like each of these kinds of materials they might review with you. Please use a scale of 1 (do not like at all) to 5 (like very much)."
+TopTwo
+Printed pieces,NaN,0
+Sheets or brochures describing the product,0.6123595505617978,327
+Checklist or worksheet to determine the right product configuration for your needs,0.5977443609022557,318
+Customer stories or case studies,0.46226415094339623,245
+"Handbook or guide on a business management topic, like how to get new customers",0.4763705103969754,252
+Tablet computer (such as an iPad),NaN,0
+Interactive tool to determine the right product configuration for your needs,0.5216572504708098,277
+"Instant quote / order confirmation with specifications, costs, delivery timing, etc.",0.5879017013232514,311
+Presentation (like a PowerPoint) on product features and benefits,0.4819047619047619,253
+Presentation featuring customer stories or case studies,0.44212523719165087,233
+Video describing the product features and benefits,0.5591603053435115,293
+Video presenting customer stories or case studies,0.41714285714285715,219
+"Video on a business management topic, like how to get new customers",0.4173076923076923,217
+
+"26. On a scale of 1 (very unlikely) to 5 (very likely), please rate how likely you are to use each of these sources / formats when you are researching a product or service for your business."
+TopTwo
+Analyst report,0.45112781954887216,240
+Audio podcast,0.2701688555347092,144
+Banner ad on a website,0.2730696798493409,145
+Blog,0.3395872420262664,181
+Call from or meeting with sales representative,0.49245283018867925,261
+Case study,0.42452830188679247,225
+eBook / guide / handbook,0.360377358490566,191
+Email newsletter,0.42641509433962266,226
+Event or trade show,0.5265151515151515,278
+Facebook,0.29300567107750475,155
+Forum or chat site,0.3483992467043315,185
+Google,0.2892249527410208,153
+Infographic,0.279467680608365,147
+"Interactive tool, such as a calculator or configurator",0.3560606060606061,188
+LinkedIn,0.30245746691871456,160
+Newspaper / magazine (print or online),0.4356060606060606,230
+One-off email,0.3365019011406844,177
+Outdoor billboard or signage,0.26806083650190116,141
+Peer / colleague,0.6325757575757576,334
+"Postcard, letter or catalog in the mail",0.3502824858757062,186
+Press release,0.3651685393258427,195
+Print newsletter,0.3950381679389313,207
+Product section of a vendor’s website,0.5075471698113208,269
+Radio,0.2495274102079395,132
+Research report,0.4367816091954023,228
+Resource section of a vendor’s website,0.47058823529411764,248
+TV,0.3416030534351145,179
+Twitter,0.25665399239543724,135
+Video on vendor website,0.3806818181818182,201
+Webinar/webcast,0.34600760456273766,182
+White paper,0.3301526717557252,173
+YouTube,0.32437619961612285,169
+
+"28. On the same scale, please rate how likely you are to use each of these sources / formats when you are making a final purchase decision for a specific product or service."
+TopTwo
+Analyst report,0.40225563909774437,214
+Audio podcast,0.2556818181818182,135
+Banner ad on a website,0.2589792060491493,137
+Blog,0.3047619047619048,160
+Call from or meeting with a sales representative,0.5179584120982986,274
+Case study,0.3988549618320611,209
+eBook / guide / handbook,0.3446969696969697,182
+Email newsletter,0.35984848484848486,190
+Event or trade show,0.4612476370510397,244
+Facebook,0.2746212121212121,145
+Forum or chat site,0.31568998109640833,167
+Google,0.286527514231499,151
+Infographic,0.2638623326959847,138
+"Interactive tool, such as a calculator or configurator",0.3415559772296015,180
+LinkedIn,0.28489483747609945,149
+Newspaper / magazine (print or online),0.3586337760910816,189
+One-off email,0.29904761904761906,157
+Outdoor billboard or signage,0.24282982791587,127
+Peer / colleague,0.6159695817490495,324
+"Postcard, letter or catalog in the mail",0.33714285714285713,177
+Press release,0.31992337164750956,167
+Print newsletter,0.39579349904397704,207
+Product section of a vendor’s website,0.5295238095238095,278
+Radio,0.26285714285714284,138
+Research report,0.41030534351145037,215
+Resource section of a vendor’s website,0.45904761904761904,241
+TV,0.32264150943396225,171
+Twitter,0.25572519083969464,134
+Video on vendor website,0.4068441064638783,214
+Webinar/webcast,0.34220532319391633,180
+White paper,0.3187022900763359,167
+YouTube,0.3157894736842105,162
+
+"30. On a scale of 1 (not at all important) to 5 (very important), how important to you are each of these aspects of marketing content, like the formats above, from a vendor?"
+TopTwo
+It addresses the concerns of companies in my industry,0.6610169491525424,351
+It addresses the concerns of companies the same size as my company,0.6210131332082551,331
+It clearly describes the benefits of the product or service,0.7664783427495292,407
+It doesn’t do a hard sell,0.6816479400749064,364
+It is addressed to me,0.575187969924812,306
+It is easy to understand,0.7637051039697542,404
+It is in a new or unique format,0.47358490566037736,251
+It is recommended by a peer / colleague,0.6698113207547169,355
+It is short,0.5340909090909091,282
+It is visually interesting or compelling,0.6120527306967984,325
+It is well-written,0.7400379506641366,390
+"It provides a compelling or time-sensitive offer, like a discount or free trial",0.5789473684210527,308
+It provides information on a product or service I’m interested in,0.7731568998109641,409
+It provides practical advice or tips I can put to use in my business,0.6698292220113852,353
+
+"32. On a scale of 1 (not at all interested) to 5 (very interested), how interested are you in each of these ways to stay in touch with vendors if you have researched a product or service, but are not yet ready to buy?"
+TopTwo
+Email newsletter,0.5141242937853108,273
+Facebook,0.29775280898876405,159
+Google,0.2556818181818182,135
+In-person meetings with a sales representative,0.5103578154425612,271
+"Letter, postcard or other mailing",0.3992467043314501,212
+LinkedIn,0.2742857142857143,144
+Occasional call from a sales representative,0.46037735849056605,244
+Occasional email from a sales representative,0.5321969696969697,281
+Print newsletter,0.4438095238095238,233
+Text messages,0.32633587786259544,171
+Twitter,0.24282982791587,127
+
+33. How often do you like a vendor to contact you when you are not yet ready to buy? (select one)
+Single
+Once a week,0.1555977229601518,82
+Once a month,0.30740037950664134,162
+Once every three months,0.19924098671726756,105
+Once every six months,0.056925996204933584,30
+Once a year,0.013282732447817837,7
+I prefer to reach out to them as needed,0.2675521821631879,141
+
+"34. On a scale of 1 (not at all interested) to 5 (very interested), how interested are you in each of these ways to stay in touch with a vendor after you have purchased their product or service?"
+TopTwo
+Email newsletter,0.5056390977443609,269
+Facebook,0.2708333333333333,143
+Google,0.24431818181818182,129
+In-person meetings with a sales representative,0.4708097928436911,250
+"Letter, postcard or other mailing",0.3808630393996248,203
+LinkedIn,0.28160919540229884,147
+Occasional call from a sales representative,0.4695817490494297,247
+Occasional email from a sales representative,0.5246212121212122,277
+Print newsletter,0.4003831417624521,209
+Text messages,0.3078393881453155,161
+Twitter,0.225,117
+
+35. How often do you like a vendor to contact you after you have purchased their product or service? (select one)
+Single
+Once a week,0.15037593984962405,80
+Once a month,0.2819548872180451,150
+Once every three months,0.21052631578947367,112
+Once every six months,0.10150375939849623,54
+Once a year,0.018796992481203006,10
+I prefer to reach out to them as needed,0.23684210526315788,126
+
+"36.1 For each of the sources / formats below, please select the stage in the purchase cycle – awareness (i.e. where you first learn about a product or service), research (i.e. investigation / evaluation) or purchase – where you are most likely to use that source / format.::Analyst report"
+Subquestion
+Awareness,0.3745019920318725,188
+Research,0.5438247011952191,273
+Purchase,0.08167330677290836,41
+
+"36.2 For each of the sources / formats below, pleas...::Audio podcast"
+Subquestion
+Awareness,0.5813008130081301,286
+Research,0.3617886178861789,178
+Purchase,0.056910569105691054,28
+
+"36.3 For each of the sources / formats below, pleas...::Banner ad on a website"
+Subquestion
+Awareness,0.6693386773547094,334
+Research,0.22044088176352705,110
+Purchase,0.11022044088176353,55
+
+"36.4 For each of the sources / formats below, pleas...::Blog"
+Subquestion
+Awareness,0.5203252032520326,256
+Research,0.3943089430894309,194
+Purchase,0.08536585365853659,42
+
+"36.5 For each of the sources / formats below, pleas...::Call from or meeting with sales representative"
+Subquestion
+Awareness,0.2865612648221344,145
+Research,0.3695652173913043,187
+Purchase,0.3438735177865613,174
+
+"36.6 For each of the sources / formats below, pleas...::Case study"
+Subquestion
+Awareness,0.27710843373493976,138
+Research,0.5983935742971888,298
+Purchase,0.12449799196787148,62
+
+"36.7 For each of the sources / formats below, pleas...::eBook / guide / handbook"
+Subquestion
+Awareness,0.3630831643002028,179
+Research,0.48884381338742394,241
+Purchase,0.14807302231237324,73
+
+"36.8 For each of the sources / formats below, pleas...::Email newsletter"
+Subquestion
+Awareness,0.43373493975903615,216
+Research,0.44377510040160645,221
+Purchase,0.12248995983935743,61
+
+"36.9 For each of the sources / formats below, pleas...::Event or trade show"
+Subquestion
+Awareness,0.4190283400809717,207
+Research,0.3805668016194332,188
+Purchase,0.20040485829959515,99
+
+"36.10 For each of the sources / formats below, plea...::Facebook"
+Subquestion
+Awareness,0.6604938271604939,321
+Research,0.2366255144032922,115
+Purchase,0.102880658436214,50
+
+"36.11 For each of the sources / formats below, plea...::Forum or discussion board"
+Subquestion
+Awareness,0.4331983805668016,214
+Research,0.4574898785425101,226
+Purchase,0.10931174089068826,54
+
+"36.12 For each of the sources / formats below, plea...::Google"
+Subquestion
+Awareness,0.6089613034623218,299
+Research,0.31160896130346233,153
+Purchase,0.07942973523421588,39
+
+"36.13 For each of the sources / formats below, plea...::Infographic"
+Subquestion
+Awareness,0.5816326530612245,285
+Research,0.30612244897959184,150
+Purchase,0.11224489795918367,55
+
+"36.14 For each of the sources / formats below, plea...::LinkedIn"
+Subquestion
+Awareness,0.5914634146341463,291
+Research,0.3150406504065041,155
+Purchase,0.09349593495934959,46
+
+"36.15 For each of the sources / formats below, plea...::Newspaper / magazine (print or online)"
+Subquestion
+Awareness,0.48096192384769537,240
+Research,0.3907815631262525,195
+Purchase,0.1282565130260521,64
+
+"36.16 For each of the sources / formats below, plea...::One-off email"
+Subquestion
+Awareness,0.548582995951417,271
+Research,0.3360323886639676,166
+Purchase,0.11538461538461539,57
+
+"36.17 For each of the sources / formats below, plea...::Outdoor billboard or signage"
+Subquestion
+Awareness,0.7067209775967414,347
+Research,0.20162932790224034,99
+Purchase,0.09164969450101833,45
+
+"36.18 For each of the sources / formats below, plea...::Peer / colleague"
+Subquestion
+Awareness,0.272,136
+Research,0.488,244
+Purchase,0.24,120
+
+"36.19 For each of the sources / formats below, plea...::Postcard, letter or catalog in the mail"
+Subquestion
+Awareness,0.5080321285140562,253
+Research,0.35943775100401604,179
+Purchase,0.13253012048192772,66
+
+"36.20 For each of the sources / formats below, plea...::Press release"
+Subquestion
+Awareness,0.5040485829959515,249
+Research,0.39473684210526316,195
+Purchase,0.10121457489878542,50
+
+"36.21 For each of the sources / formats below, plea...::Print newsletter"
+Subquestion
+Awareness,0.45656565656565656,226
+Research,0.4262626262626263,211
+Purchase,0.11717171717171718,58
+
+"36.22 For each of the sources / formats below, plea...::Product section of a vendor’s website"
+Subquestion
+Awareness,0.2633663366336634,133
+Research,0.49306930693069306,249
+Purchase,0.24356435643564356,123
+
+"36.23 For each of the sources / formats below, plea...::Radio"
+Subquestion
+Awareness,0.6721311475409836,328
+Research,0.22950819672131148,112
+Purchase,0.09836065573770492,48
+
+"36.24 For each of the sources / formats below, plea...::Research report"
+Subquestion
+Awareness,0.25201612903225806,125
+Research,0.6209677419354839,308
+Purchase,0.12701612903225806,63
+
+"36.25 For each of the sources / formats below, plea...::Resource section of a vendor’s website"
+Subquestion
+Awareness,0.2868686868686869,142
+Research,0.5353535353535354,265
+Purchase,0.17777777777777778,88
+
+"36.26 For each of the sources / formats below, plea...::TV"
+Subquestion
+Awareness,0.6247464503042597,308
+Research,0.2718052738336714,134
+Purchase,0.10344827586206896,51
+
+"36.27 For each of the sources / formats below, plea...::Twitter"
+Subquestion
+Awareness,0.6782786885245902,331
+Research,0.22745901639344263,111
+Purchase,0.0942622950819672,46
+
+"36.28 For each of the sources / formats below, plea...::Video on vendor website"
+Subquestion
+Awareness,0.3665987780040733,180
+Research,0.4908350305498982,241
+Purchase,0.1425661914460285,70
+
+"36.29 For each of the sources / formats below, plea...::Webinar/webcast"
+Subquestion
+Awareness,0.41922290388548056,205
+Research,0.4498977505112474,220
+Purchase,0.130879345603272,64
+
+"36.30 For each of the sources / formats below, plea...::White paper"
+Subquestion
+Awareness,0.44693877551020406,219
+Research,0.4489795918367347,220
+Purchase,0.10408163265306122,51
+
+"36.31 For each of the sources / formats below, plea...::YouTube"
+Subquestion
+Awareness,0.5640495867768595,273
+Research,0.3347107438016529,162
+Purchase,0.1012396694214876,49
+
+"37.1 For each sources / format below, please indicate which you are most likely to view on a desktop / laptop; a smartphone such as an iPhone or Samsung Galaxy; or a tablet such as an iPad or Surface.::Analyst report"
+Subquestion
+Desktop / laptop,0.7775551102204409,388
+Smart-phone,0.11222444889779559,56
+Tablet,0.11022044088176353,55
+
+"37.2 For each sources / format below, please indica...::Audio podcast"
+Subquestion
+Desktop / laptop,0.6160164271047228,300
+Smart-phone,0.24845995893223818,121
+Tablet,0.13552361396303902,66
+
+"37.3 For each sources / format below, please indica...::Banner ad on a website"
+Subquestion
+Desktop / laptop,0.6741803278688525,329
+Smart-phone,0.15368852459016394,75
+Tablet,0.1721311475409836,84
+
+"37.4 For each sources / format below, please indica...::Blog"
+Subquestion
+Desktop / laptop,0.668041237113402,324
+Smart-phone,0.16082474226804125,78
+Tablet,0.1711340206185567,83
+
+"37.5 For each sources / format below, please indica...::Case study"
+Subquestion
+Desktop / laptop,0.7244897959183674,355
+Smart-phone,0.12040816326530612,59
+Tablet,0.15510204081632653,76
+
+"37.6 For each sources / format below, please indica...::eBook / guide / handbook"
+Subquestion
+Desktop / laptop,0.6311475409836066,308
+Smart-phone,0.17827868852459017,87
+Tablet,0.19057377049180327,93
+
+"37.7 For each sources / format below, please indica...::Email newsletter"
+Subquestion
+Desktop / laptop,0.6565656565656566,325
+Smart-phone,0.1717171717171717,85
+Tablet,0.1717171717171717,85
+
+"37.8 For each sources / format below, please indica...::Facebook"
+Subquestion
+Desktop / laptop,0.6045548654244306,292
+Smart-phone,0.2567287784679089,124
+Tablet,0.13871635610766045,67
+
+"37.9 For each sources / format below, please indica...::Forum or discussion board"
+Subquestion
+Desktop / laptop,0.6811594202898551,329
+Smart-phone,0.15942028985507245,77
+Tablet,0.15942028985507245,77
+
+"37.10 For each sources / format below, please indic...::Google"
+Subquestion
+Desktop / laptop,0.6409185803757829,307
+Smart-phone,0.22964509394572025,110
+Tablet,0.12943632567849686,62
+
+"37.11 For each sources / format below, please indic...::Infographic"
+Subquestion
+Desktop / laptop,0.6887966804979253,332
+Smart-phone,0.17634854771784234,85
+Tablet,0.13485477178423236,65
+
+"37.12 For each sources / format below, please indic...::LinkedIn"
+Subquestion
+Desktop / laptop,0.6519916142557652,311
+Smart-phone,0.2138364779874214,102
+Tablet,0.13417190775681342,64
+
+"37.13 For each sources / format below, please indic...::Newspaper / magazine site"
+Subquestion
+Desktop / laptop,0.7008196721311475,342
+Smart-phone,0.14344262295081966,70
+Tablet,0.1557377049180328,76
+
+"37.14 For each sources / format below, please indic...::One-off email"
+Subquestion
+Desktop / laptop,0.6278586278586279,302
+Smart-phone,0.26195426195426197,126
+Tablet,0.1101871101871102,53
+
+"37.15 For each sources / format below, please indic...::Press release"
+Subquestion
+Desktop / laptop,0.6714285714285714,329
+Smart-phone,0.1816326530612245,89
+Tablet,0.1469387755102041,72
+
+"37.16 For each sources / format below, please indic...::Product section of a vendor’s website"
+Subquestion
+Desktop / laptop,0.7237903225806451,359
+Smart-phone,0.16532258064516128,82
+Tablet,0.11088709677419355,55
+
+"37.17 For each sources / format below, please indic...::Research report"
+Subquestion
+Desktop / laptop,0.717479674796748,353
+Smart-phone,0.1402439024390244,69
+Tablet,0.14227642276422764,70
+
+"37.18 For each sources / format below, please indic...::Resource section of a vendor’s website"
+Subquestion
+Desktop / laptop,0.7151639344262295,349
+Smart-phone,0.15368852459016394,75
+Tablet,0.13114754098360656,64
+
+"37.19 For each sources / format below, please indic...::Twitter"
+Subquestion
+Desktop / laptop,0.5527426160337553,262
+Smart-phone,0.3037974683544304,144
+Tablet,0.14345991561181434,68
+
+"37.20 For each sources / format below, please indic...::Video on vendor website"
+Subquestion
+Desktop / laptop,0.6625258799171843,320
+Smart-phone,0.18426501035196688,89
+Tablet,0.15320910973084886,74
+
+"37.21 For each sources / format below, please indic...::Webinar/webcast"
+Subquestion
+Desktop / laptop,0.6950207468879668,335
+Smart-phone,0.15352697095435686,74
+Tablet,0.15145228215767634,73
+
+"37.22 For each sources / format below, please indic...::White paper"
+Subquestion
+Desktop / laptop,0.6983471074380165,338
+Smart-phone,0.18181818181818182,88
+Tablet,0.11983471074380166,58
+
+"37.23 For each sources / format below, please indic...::YouTube"
+Subquestion
+Desktop / laptop,0.6150627615062761,294
+Smart-phone,0.1799163179916318,86
+Tablet,0.20502092050209206,98
+
+38. How important to you are customer stories or case studies when you are considering buying a new product or service for your business? (select one)
+Single
+Very important,0.3390804597701149,177
+Important,0.3065134099616858,160
+Somewhat important,0.24521072796934865,128
+Not at all important,0.10919540229885058,57
+
+39. How often do you read or view customer stories or case studies when you are considering buying a new product or service for your business? (select one)
+Single
+Always,0.24763705103969755,131
+Most of the time,0.33081285444234404,175
+Sometimes,0.2570888468809074,136
+Rarely,0.13043478260869565,69
+Never,0.034026465028355386,18
+
+"40. On a scale of 1 (not at all important) to 5 (very important), how important are customer stories or case studies when you are considering a product or service from a vendor in each of these categories:"
+TopTwo
+"Banks (e.g., checking accounts, loans, online payments)",0.44212523719165087,233
+"Business travel: airlines, hotels, rental cars etc.",0.4781783681214421,252
+Cellphone / smartphone; cellphone service,0.47992351816443596,251
+Credit cards,0.42585551330798477,224
+Employee recruiting services / temp agencies,0.4220532319391635,222
+"Insurance companies (e.g., business insurance; employee life and health insurance)",0.46551724137931033,243
+Internet access providers / website hosts,0.4646271510516252,243
+Local technology solution providers,0.4827586206896552,252
+"Marketing services (e.g., online advertising, email / social media marketing)",0.4326923076923077,225
+Office supply stores / print centers,0.38740458015267176,203
+Overnight package delivery companies,0.4092664092664093,212
+Payroll service providers,0.43486590038314177,227
+"Phone (i.e., non-cellphone) company/ies",0.43570057581573896,227
+Retirement plan providers,0.45366795366795365,235
+"Social media companies (e.g., Facebook, Google, LinkedIn, Twitter)",0.32245681381957775,168
+Software companies,0.46923076923076923,244
+"Technology hardware (i.e., PCs, printers, servers) manufacturers",0.5311284046692607,273
+
+41. What format do you prefer customer stories or case studies to be in? (select one)
+Single
+"Print (i.e., paper)",0.34307992202729043,176
+Online PDF or HTML,0.5555555555555556,285
+Video,0.10136452241715399,52
+
+"42. On a scale of 1 (not at all important) to 5 (very important), please rate how important each of these aspects of a customer story or case study is to you."
+TopTwo
+The challenges faced by the featured company are similar to mine,0.6209523809523809,326
+The featured company is about the same size as my company,0.5635673624288425,297
+The featured company is in my industry,0.5961904761904762,313
+The story clearly describes the benefits of the relevant product or service,0.675,351
+The story describes the specific results the company achieved,0.6596558317399618,345
+The story is easy to read or view,0.6915708812260536,361
+The story is short,0.5727969348659003,299
+The story is visually interesting or compelling,0.5659655831739961,296
+The story was rated highly by previous readers / viewers,0.47784200385356457,248
+The story was recommended by a peer / colleague,0.6177606177606177,320
+
+"43. On a scale of 1 (do not like) to 5 (like very much), please rate how much you like each of these ways to access customer stories or case studies."
+TopTwo
+Find online via search,0.5984703632887189,313
+On third party sites / newsletters,0.40115163147792704,209
+On vendor’s Facebook page,0.2923076923076923,152
+On vendor’s Google page,0.2925430210325048,153
+On vendor’s LinkedIn page or group,0.29904761904761906,157
+On vendor’s Twitter feed,0.26346153846153847,137
+On vendor’s website,0.6180422264875239,322
+On vendor’s YouTube channel,0.3570057581573896,186
+Via email from vendor,0.49230769230769234,256
+Via text message from vendor,0.32821497120921306,171
+
+44. What is the best length for a written (print or PDF) customer story or case study? (select one)
+Single
+One page,0.41088180112570355,219
+Two pages,0.3902439024390244,208
+Three or four pages,0.15196998123827393,81
+More than four pages,0.04690431519699812,25
+
+45. What is the best length for a video customer story or case study? (select one)
+Single
+Less than two minutes,0.24813432835820895,133
+Two or three minutes,0.417910447761194,224
+Four or five minutes,0.2555970149253731,137
+More than five minutes,0.07835820895522388,42
+
+"46. In general, how important to you are white papers when you are considering buying a new product or service for your business? (select one)"
+Single
+Very important,0.22180451127819548,118
+Important,0.32142857142857145,171
+Somewhat important,0.2951127819548872,157
+Not at all important,0.16165413533834586,86
+
+47. How often do you read white papers when you are considering buying a new product or service for your business? (select one)
+Single
+Always,0.19245283018867926,102
+Most of the time,0.3018867924528302,160
+Sometimes,0.29245283018867924,155
+Rarely,0.13584905660377358,72
+Never,0.07735849056603773,41
+
+"48. On a scale of 1 (not at all important) to 5 (very important), how important are white papers when you are considering a product or service from vendors in each of these categories:"
+TopTwo
+"Banks (e.g., checking accounts, loans, online payments)",0.40458015267175573,212
+"Business travel: airlines, hotels, rental cars etc.",0.367112810707457,192
+Cellphone / smartphone; cellphone service,0.36,189
+Credit cards,0.3793103448275862,198
+Employee recruiting services / temp agencies,0.3524904214559387,184
+"Insurance companies (e.g., business insurance; employee life and health insurance)",0.42277992277992277,219
+Internet access providers / website hosts,0.37764932562620424,196
+Local technology solution providers,0.3945841392649903,204
+"Marketing services (e.g., online advertising, email / social media marketing)",0.36608863198458574,190
+Office supply stores / print centers,0.33911368015414256,176
+Overnight package delivery companies,0.32625482625482627,169
+Payroll service providers,0.37884615384615383,197
+"Phone (i.e., non-cellphone) company/ies",0.36750483558994196,190
+Retirement plan providers,0.4321705426356589,223
+"Social media companies (e.g., Facebook, Google, LinkedIn, Twitter)",0.28488372093023256,147
+Software companies,0.42940038684719534,222
+"Technology hardware (i.e., PCs, printers, servers) manufacturers",0.4500978473581213,230
+
+"49. On a scale of 1 (do not like) to 5 (like very much), please rate how much you like each of these ways to access white papers."
+TopTwo
+Find online via search,0.5544933078393881,290
+On third-party sites or newsletters,0.36730769230769234,191
+On vendor’s Facebook page,0.28489483747609945,149
+On vendor’s Google page,0.2729007633587786,143
+On vendor’s LinkedIn page or group,0.2832369942196532,147
+On vendor’s Twitter feed,0.24806201550387597,128
+On vendor’s website,0.5421455938697318,283
+On vendor’s YouTube channel,0.3067961165048544,158
+Via email from vendor,0.4728682170542636,244
+Via text message from vendor,0.32688588007736946,169
+
+50. What is the best length for a white paper? (select one)
+Single
+Two to three pages,0.6988416988416989,362
+Four to six pages,0.25675675675675674,133
+More than six pages,0.0444015444015444,23
+
+"51. On a scale of 1 (not at all important) to 5 (very important), please rate how important each of these aspects of a white paper is to you."
+TopTwo
+"It includes or links to relevant videos, interactive elements or other information",0.4524714828897338,238
+"It is focused on a business challenge I am facing, such as increasing sales or managing IT",0.5782442748091603,303
+It is non-promotional,0.539047619047619,283
+It provides data from a relevant survey,0.601145038167939,315
+It provides examples of users who have tried the product or service,0.5873320537428023,306
+It provides technical detail on the product or service I am interested in,0.6057692307692307,315
+It is rated highly by previous viewers,0.4728682170542636,244
+It is recommended by a peer / colleague,0.5934489402697495,308
+It is well-designed and easy to read,0.65,338
+It is written by a subject matter expert from the sponsoring company,0.5009671179883946,259
+It is written by a third-party subject matter expert,0.4843137254901961,247
+
+"52. In general, how important to you are webcasts when you are considering buying a new product or service for your business? (select one)"
+Single
+Very important,0.2049335863377609,108
+Important,0.25806451612903225,136
+Somewhat important,0.2618595825426945,138
+Not at all important,0.27514231499051234,145
+
+53. How often do you view webcasts when you are considering buying a new product or service for your business? (select one)
+Single
+Always,0.16037735849056603,85
+Most of the time,0.23962264150943396,127
+Sometimes,0.25471698113207547,135
+Rarely,0.18679245283018867,99
+Never,0.15849056603773584,84
+
+"54. On a scale of 1 (not at all important) to 5 (very important), how important are webcasts when you are considering a product or service from vendors in each of these categories:"
+TopTwo
+"Banks (e.g., checking accounts, loans, online payments)",0.31992337164750956,167
+"Business travel: airlines, hotels, rental cars etc.",0.3416506717850288,178
+Cellphone / smartphone; cellphone service,0.35372848948374763,185
+Credit cards,0.32053742802303264,167
+Employee recruiting services / temp agencies,0.32950191570881227,172
+"Insurance companies (e.g., business insurance; employee life and health insurance)",0.32884615384615384,171
+Internet access providers / website hosts,0.3520309477756286,182
+Local technology solution providers,0.3742690058479532,192
+"Marketing services (e.g., online advertising, email / social media marketing)",0.35260115606936415,183
+Office supply stores / print centers,0.3217726396917148,167
+Overnight package delivery companies,0.3044315992292871,158
+Payroll service providers,0.3166023166023166,164
+"Phone (i.e., non-cellphone) company/ies",0.3236434108527132,167
+Retirement plan providers,0.3521400778210117,181
+"Social media companies (e.g., Facebook, Google, LinkedIn, Twitter)",0.2655038759689923,137
+Software companies,0.3715953307392996,191
+"Technology hardware (i.e., PCs, printers, servers) manufacturers",0.3953488372093023,204
+
+"55. On a scale of 1 (do not like) to 5 (like very much), please rate how much you like each of these ways to learn about webcasts."
+TopTwo
+Find online via search,0.5076045627376425,267
+On third-party sites or newsletters,0.35892514395393477,187
+On vendor’s Facebook page,0.27724665391969405,145
+On vendor’s Google  page,0.26095238095238094,137
+On vendor’s LinkedIn page or group,0.2732447817836812,144
+On vendor’s Twitter feed,0.24045801526717558,126
+On vendor’s website,0.4932821497120921,257
+On vendor’s YouTube channel,0.3320610687022901,174
+Via email from vendor,0.44145873320537427,230
+Via text message from vendor,0.29206963249516443,151
+
+56. What is the best length for a webcast? (select one)
+Single
+No more than 15 minutes,0.5855513307984791,308
+15 to 30 minutes,0.30038022813688214,158
+30 to 45 minutes,0.08365019011406843,44
+45 minutes to an hour,0.030418250950570342,16
+
+"57. On a scale of 1 (not at all important) to 5 (very important), please rate how important each of these aspects of a webcast is to you."
+TopTwo
+It features a company with the same kind of challenges I am facing,0.5736137667304015,300
+It features an expert third-party presenter,0.47338403041825095,249
+It features a senior executive from the sponsoring company,0.4173076923076923,217
+It features a company in my industry,0.5525812619502868,289
+It focuses on a product or service I am interested in,0.6673040152963671,349
+"It focused on a business challenge I am facing, such as increasing sales or managing IT",0.5942307692307692,309
+It is non-promotional,0.5393474088291746,281
+It is rated highly by previous viewers,0.4894433781190019,255
+It is recommended by a peer / colleague,0.6027131782945736,311
+
+"58. On a scale of 1 (strongly disagree) to 5 (strongly agree), please rate each of these statements about buying technology solutions, such as hardware or software."
+TopTwo
+"I prefer to buy directly from a technology vendor, as opposed to a distributor or reseller (such as a technology consultant)",0.5831739961759083,305
+"I am more likely to respond to a call, email or mailing from a technology vendor than from a distributor or reseller",0.4875717017208413,255
+Buying from a distributor or reseller makes the sales process take longer,0.4217557251908397,221
+Buying from a distributor or reseller increases the total solution cost,0.5365384615384615,279
+Buying from a distributor or reseller gets me a solution that is better tailored to my needs than I would get if I bought directly from a vendor,0.4038095238095238,212
+Buying from a distributor or reseller negatively affects my perception of the vendor’s brand,0.3065134099616858,160
+"There are technology solutions, such as cloud-based applications, that I would prefer to buy directly from a vendor",0.5,259
+
+"59.1 Please indicate which technology solutions you would prefer to buy directly from a vendor, and which you would prefer to buy from a distributor or reseller.::Cloud-based applications / services"
+Subquestion
+From vendor,0.837890625,429
+From a reseller,0.162109375,83
+
+"59.2 Please indicate which technology solutions you...::Networking equipment (e.g., switches, hubs)"
+Subquestion
+From vendor,0.6888454011741683,352
+From a reseller,0.3111545988258317,159
+
+59.3 Please indicate which technology solutions you...::Phone systems
+Subquestion
+From vendor,0.6994106090373281,356
+From a reseller,0.3005893909626719,153
+
+59.4 Please indicate which technology solutions you...::PCs / laptops / workstations
+Subquestion
+From vendor,0.6731898238747553,344
+From a reseller,0.3268101761252446,167
+
+59.5 Please indicate which technology solutions you...::Printers
+Subquestion
+From vendor,0.6232741617357002,316
+From a reseller,0.3767258382642998,191
+
+59.6 Please indicate which technology solutions you...::Security solutions
+Subquestion
+From vendor,0.7529644268774703,381
+From a reseller,0.24703557312252963,125
+
+59.7 Please indicate which technology solutions you...::Servers / storage
+Subquestion
+From vendor,0.7603960396039604,384
+From a reseller,0.2396039603960396,121
+
+59.8 Please indicate which technology solutions you...::Tablets
+Subquestion
+From vendor,0.6365461847389559,317
+From a reseller,0.3634538152610442,181
+
+"61. On a scale of 1 (very unfavorable) to 5 (very favorable), how do you feel about each of these brands?"
+TopTwo
+American Express OPEN,0.4629981024667932,244
+Apple,0.6596958174904943,347
+AT&T,0.5057251908396947,265
+Bank of America,0.37667304015296366,197
+Cablevision,0.26436781609195403,138
+Capital One,0.41523809523809524,218
+CenturyLink,0.2638623326959847,138
+Charles Schwab,0.4575289575289575,237
+Charter Communications,0.26436781609195403,138
+Chase Bank,0.5076923076923077,264
+Cisco,0.5029126213592233,259
+Citibank,0.41811175337186895,217
+Comcast,0.34099616858237547,178
+Cox,0.2466281310211946,128
+Dell,0.5391969407265774,282
+Facebook,0.43953934740882916,229
+FedEx,0.6723809523809524,353
+Fidelity Investments,0.475,247
+Google,0.6146435452793835,319
+HP,0.6211538461538462,323
+IBM,0.5642023346303502,290
+Intuit,0.5019305019305019,260
+Lenovo,0.3825242718446602,197
+LinkedIn,0.39615384615384613,206
+Microsoft,0.6660268714011516,347
+Office Depot,0.5442307692307692,283
+OfficeMax,0.5106382978723404,264
+Oracle,0.4649805447470817,239
+Salesforce.com,0.305019305019305,158
+Sam’s Club,0.4596153846153846,239
+Sony,0.6218809980806143,324
+Sprint,0.38684719535783363,200
+Staples,0.5366795366795367,278
+Symantec,0.4140625,212
+Twitter,0.3288201160541586,170
+UPS,0.6446601941747573,332
+U.S. Bank,0.3735408560311284,192
+Verizon,0.5428015564202334,279
+Wells Fargo,0.4524271844660194,233
+

@@ -1,7 +1,11 @@
+
+
+
 require 'csv'
 require 'date'
 require 'debugger'
-Dir["./lib/*"].each {|file| require file }
+
+Dir["./lib/*"].each { |file| require file }
 
 ### start method definitions
 
@@ -33,60 +37,42 @@ def find_questions(rows)
     end
   end
   # debugger
-  @starts_ends = starts.zip(ends)
+  starts.zip(ends)
 end
 
-def split_questions
-  @starts_ends.each do |start, finish|
-    question_rows = []
-    @rows[start..finish].each do |row|
-      question_rows << row
-    end
-    @question_row_sets << question_rows
+def split_questions(rows, starts_ends)
+  row_sets = []
+  starts_ends.each do |start, finish|
+    row_sets << rows[start..finish]
   end
+  row_sets
 end
 
 
-def get_question_text(string)
-  digits_to_drop = string.match(/\d{1,2}/)[0].length + 2
-  text = string.split('').drop(digits_to_drop).join('')
-end
-
-
-
-
-### end method definitions
-
-### begin program
 p "Sifting for relevant data in: all demos"
 # demo = gets.chomp
+
 demos = Dir.entries("sg_in").select { |file| !File.directory?(file) }
+
+
 demos.each do |demo|
   contents = CSV.open "sg_in/#{demo}", "r:ISO-8859-1"
-  @rows = []
-  @starts_ends = []
-  @question_row_sets = []
 
-  # these three methods populate @question_row_sets with each question
-  contents.each do |row|
-    @rows << row
-  end
-  puts demo
-  find_questions(@rows)
-  split_questions
-  p "#{@question_row_sets.count} questions to parse"
+  rows = contents.to_a
+  starts_ends = find_questions(rows)
+  @question_row_sets = split_questions(rows, starts_ends)
 
-  # get question objects
+
+  # create question objects from row data
   questions = []
-  @question_row_sets.each do |question|
-    questions.concat(Question.parse_row_data(question))
+  @question_row_sets.each do |question_rows|
+    questions.concat(Question.parse_row_data(question_rows))
   end
-
 
   CSV.open("sg_out/#{demo}", "wb") do |rows|
     rows << [nil, "#{demo.chomp('.')}", DateTime.now]
     rows << [nil, "p/rank", "n"]
-    
+  
     questions.each do |question|
       rows << [question.name]
       rows << [question.class.to_s]
@@ -97,6 +83,7 @@ demos.each do |demo|
           rows << [value.name, value.proportion, value.count]
         end
       end
+      # add empty line to separate questions
       rows << []
     end
   end
